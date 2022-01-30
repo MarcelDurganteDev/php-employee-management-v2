@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 class Nuevo extends Controller{
@@ -10,7 +10,7 @@ class Nuevo extends Controller{
     }
     public function registrarAlumno(){
     //    echo "alumno creado";
-    
+
        $matricula= $_POST["matricula"];
        $nombre= $_POST["nombre"];
        $apellido= $_POST["apellido"];
@@ -23,6 +23,3 @@ class Nuevo extends Controller{
       $this -> render();
     }
 }
-
-
-?> 

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
+    <?php
     require "views/header.php";
     ?>
 
@@ -17,7 +17,7 @@
         echo $this -> mensaje;
     }
         ?></div>
-    <form action="<?php echo constant("URL");?>/nuevo/registrarAlumno" method="post">
+    <form action="<?= Url::asset('/nuevo/registrarAlumno');?>" method="post">
     <p>
         <label for="matricula">Matricula</label><br>
         <input type="text" name="matricula" id="" required>
@@ -37,7 +37,7 @@
 
     </form>
 </div>
-    <?php 
+    <?php
     require "views/footer.php";
     ?>
 </body>

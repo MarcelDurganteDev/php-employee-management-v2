@@ -1,4 +1,7 @@
 <?php
+
+require_once __DIR__."/../config/db.php";
+
 class Database{
 
     private $host;
@@ -10,11 +13,11 @@ class Database{
 
     public function __construct()
     {
-        $this->host = constant("HOST");
-        $this->db = constant("DB");
-        $this->user = constant("USER");
-        $this->password = constant("PASSWORD");
-        $this->charset = constant("CHARSET");
+        $this->host      = HOST;
+        $this->db        = DB;
+        $this->user      = USER;
+        $this->password  = PASSWORD;
+        $this->charset   = CHARSET;
     }
 
     function connect()
@@ -43,5 +46,3 @@ class Database{
         }
     }
 }
-
-?>

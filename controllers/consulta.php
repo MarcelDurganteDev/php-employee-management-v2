@@ -1,15 +1,19 @@
-<?php 
+<?php
 
 
-class Consulta extends Controller{
-    function __construct(){
+class Consulta extends Controller
+{
+
+    function __construct()
+    {
         parent::__construct();
     }
-    function render(){
-        $this ->view->render("consulta/index");
+
+    function render()
+    {
+        $this ->view->render("consulta/index", [
+            'model' => $this->model,
+            'algo'  => 'valor',
+        ]);
     }
 }
-
-
-
-?> 
