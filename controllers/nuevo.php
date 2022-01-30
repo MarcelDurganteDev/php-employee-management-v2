@@ -6,9 +6,11 @@ class Nuevo extends Controller{
         parent::__construct();
     }
     function render(){
+        $this->restrictContent();
         $this ->view->render("nuevo/index");
     }
-    public function registrarAlumno(){
+    public function registrarAlumno()
+    {
     //    echo "alumno creado";
 
        $matricula= $_POST["matricula"];

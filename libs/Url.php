@@ -10,7 +10,7 @@ class Url
      */
     public static function asset(string $relative_item = null)
     {
-        return self::url(self::getBasePath() . $relative_item);
+        return self::url($relative_item);
     }
 
     /**
@@ -21,7 +21,7 @@ class Url
      */
     public static function url(string $relative_item = null)
     {
-        return self::getBaseHost() . $relative_item;
+        return self::getBaseHost() . self::getBasePath() . $relative_item;
     }
 
     /**

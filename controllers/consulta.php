@@ -11,9 +11,10 @@ class Consulta extends Controller
 
     function render()
     {
+        $this->restrictContent();
+
         $this ->view->render("consulta/index", [
             'model' => $this->model,
-            'algo'  => 'valor',
         ]);
     }
 }
