@@ -15,7 +15,9 @@ class Auth extends Controller
     /**
      * function auth
      *
-     * @return
+     * route: /auth/auth
+     *
+     * Validate and make login
      */
     public function auth()
     {
@@ -62,11 +64,13 @@ class Auth extends Controller
         header('Location: ' . Url::url('/main'));die();
     }
 
+    //Login form
     public function  login()
     {
         $this ->view->render("auth/login");
     }
 
+    //Registration form
     public function  register()
     {
         $this ->view->render("auth/register");
