@@ -2,16 +2,27 @@
 
 class Controller{
 
-    public function __construct(){
+    public function __construct()
+    {
         $this -> view= new View();
     }
-    function loadModel($model){
-        $file= "models/".$model."model.php";
 
-        if(file_exists($file)){
-            require $file;
+    public function loadModel($model)
+    {
+        $this->model = static::customLoadModel($model);
+    }
+
+    public static function customLoadModel(string $model)
+    {
+        $file= __DIR__."/../models/".$model."model.php";
+
+        if(file_exists($file))
+        {
+            require_once $file;
             $modelName=$model."Model";
-            $this->model = new $modelName();
+            return new $modelName();
         }
+
+        return null;
     }
 }

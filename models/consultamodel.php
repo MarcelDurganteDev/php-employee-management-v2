@@ -69,7 +69,6 @@ class ConsultaModel extends Model
     public function update($item){
         // echo "<pre>";
 
-        // var_dump($item);
 
 
         $query = $this->db->connect()->prepare("UPDATE alumnos SET nombre = :nombre, apellido = :apellido WHERE matricula = :matricula");
@@ -77,7 +76,6 @@ class ConsultaModel extends Model
 
 
             // echo "update item after query";
-            // var_dump($item);
 
             $query->execute(["matricula" => $item["matricula"], "nombre" => $item["nombre"], "apellido" => $item["apellido"]
             ]);
@@ -94,8 +92,6 @@ class ConsultaModel extends Model
     public function delete($id){
         $query = $this->db->connect()->prepare("DELETE FROM alumnos WHERE matricula = :id");
         try {
-            // var_dump($item["matricula"]);
-            // var_dump($item);
             $query->execute([
                 "id" => $id,
             ]);

@@ -1,3 +1,5 @@
 <?php
 
-define("URL", "http://localhost/php-employee-management-v2/");
+return [
+    'app_name' => 'My System',
+];
