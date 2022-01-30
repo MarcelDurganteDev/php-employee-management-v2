@@ -19,12 +19,18 @@ class Auth extends Controller
      */
     public function auth()
     {
+        $accepted_methods = ['post'];
+
+        if(!in_array(strtolower($_SERVER['REQUEST_METHOD']), $accepted_methods)) {
+            die('Used method is invalid!. Accepted: '. implode(',', $accepted_methods));//TODOimplementsredirect with sessions messages
+        }
+
         $email      = $_POST['email']    ?? null;
         $password   = $_POST['password'] ?? null;
 
         if(!$email || !$password)
         {
-            die('Email and password is rquired!');//TODOimplementsredirect with sessions messages
+            die('Email and password are required!');//TODOimplementsredirect with sessions messages
         }
 
         $user  = $this->customLoadModel('users')->getFirstByEmail($email);
