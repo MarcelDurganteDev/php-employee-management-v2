@@ -12,8 +12,9 @@ class UserAuth
 
     public static function authUser(string $key = null)
     {
-        if (!static::isAuth()) {
-            return [];
+        if (!static::isAuth())
+        {
+            return null;
         }
 
         $user = static::user();
