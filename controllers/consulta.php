@@ -11,7 +11,7 @@ class Consulta extends Controller
 
     function render()
     {
-        $this->restrictContent();
+        $this->restrictContent();     // BLOCKS  
 
         $this ->view->render("consulta/index", [
             'model' => $this->model,

@@ -10,17 +10,19 @@ class UserAuth
         return $key ? ($user[$key] ?? null) : $user;
     }
 
+    // if want to return else where user logged, only call UserAuth::authUser - if param return user key, otherwise return logged
     public static function authUser(string $key = null)
     {
-        if (!static::isAuth())
-        {
+        if (!static::isAuth()) {
+
+            // return [] did not worked here
             return null;
         }
-
+dd([__FILE__.':'.__LINE__]);
         $user = static::user();
         return $key ? ($user[$key] ?? null) : $user;
     }
-
+// validate if user is logged or not - returns boolean 
     public static function isAuth()
     {
         $user = static::user();
