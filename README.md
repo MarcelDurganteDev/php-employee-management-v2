@@ -6,6 +6,9 @@
   <img alt="Version" src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
+
+# please use npm install and change the Define Url in config file in order for this to work in your pc.
+
 > This project provides an easy-to-use interface to manage employees information. The application user case starts with an user log in, and allows the user to read, create, delete and update the employee´s information. The user and employee data is stored in a database.
 
 > This project objective is to create a file structure following the MVC pattern, with a basic router implementation and OOP approach.
@@ -29,7 +32,7 @@
 The project dependencies are already referenced in the **package-lock.json** file in the root folder. For that reason, it is only necesary to run the following command to allow these to work:
 
 ```sh
-npm instal
+npm install
 ```
 
 In order to complete/execute this project, the set up of a server environment and PHP interpreter is needed. You need to have at least PHP v7.4 or above to develop this project, which is capable of running PHP to its latest version.
@@ -68,12 +71,3 @@ This project could be used to manage employee information.
 
 ## Based on
 
-This repository is based on a past delivery from master's students:
-
-👤 **Víctor Martínez**
-
-👤 **Ismael Vázquez**
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

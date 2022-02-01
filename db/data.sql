@@ -57,6 +57,3 @@ INSERT INTO employees (name, lastName, email, gender, city, streetAddress, state
 
 
 
-
-
-

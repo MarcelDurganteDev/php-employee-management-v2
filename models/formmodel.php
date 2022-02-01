@@ -22,13 +22,9 @@ class formModel extends Model{
             $query= $this->db -> connect() -> prepare("INSERT INTO employees (name, lastName, email, gender, city, streetAddress, state, age, postalCode, phoneNumber) VALUES
             ('$name', '$lastName', '$email', '$gender', '$city',$streetAddress, '$state', $age, $postalCode, $phoneNumber);");
             $query ->execute();
-            
-            // echo "Insertar datos";
             return true;
         }
         catch(PDOException $e){
-            // echo $e->getMessage();
-            // echo "Ya existe esa matricula";
             return false;
         }
 
@@ -36,7 +32,7 @@ class formModel extends Model{
     
     public function dbCheck($id){
         try{
-            $query= $this->db -> connect() -> prepare(" Select * from employees where id=$id;");
+            $query= $this->db -> connect() -> prepare("Select * from employees where id=$id;");
              $query ->execute();
              $data= $query->fetchAll();
             return $data;

@@ -7,6 +7,7 @@ registerView= data.replace("dashboard", "form")
 
 datatoshowtime =window.location.href
 
+
 if(datatoshowtime.includes("dashboard")){
     url=datatoshowtime.replace("dashboard", "login")
     console.log(url)
@@ -71,7 +72,7 @@ if(datatoshowtime.includes("dashboard")){
                   })
                 setTimeout(() => {
                     window.location.assign(`${data}`)
-                }, 2000);
+                }, 1000);
                
             }
         }
@@ -96,8 +97,6 @@ async function callDataEmploee() {
         console.error("Don't load the Data");
     }
 };
-
-
 
 
 async function callGrid() {
